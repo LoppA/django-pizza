@@ -1,5 +1,6 @@
 pedidos = []
 
+
 #   ''     ''      ''     ''     observacao='sem observacoes'
 def criar_pedido(nome, sabor, observacao=None):
     pedido = {}
@@ -9,7 +10,13 @@ def criar_pedido(nome, sabor, observacao=None):
 
     return pedido
 
-print(pedidos)
 pedidos.append(criar_pedido('mario', 'pepperoni'))
-pedidos.append(criar_pedido('marco', 'presunto'))
-print(pedidos)
+pedidos.append(criar_pedido('marco', 'presunto', 'dobro de presunto'))
+
+for pedido in pedidos:
+    template = 'Nome: {nome}\nSabor: {sabor}'
+    print(template.format(**pedido))
+    if pedido['observacao']:
+        print('Observacao: {}'.format(pedido['observacao']))
+
+    print('-'*35)
