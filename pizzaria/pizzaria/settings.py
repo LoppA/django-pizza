@@ -78,7 +78,6 @@ WSGI_APPLICATION = 'pizzaria.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config()
-    }
 }
 
 
