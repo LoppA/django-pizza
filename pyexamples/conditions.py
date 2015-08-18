@@ -1,7 +1,7 @@
 
 print('Hello World')
 
-salse = 'tomato'
+sauce = 'tomato'
 
 #string multiline
 order_description = """
@@ -13,10 +13,15 @@ order_number = 42
 
 order_number = 'other thing'
 
-if salse.startswith('toma'):
+if sauce.startswith('toma'):
     print("it's probably tomato...")
 else:
     print("not tomato")
 
 if order_description:
     print(order_description)
+
+
+
+
+
