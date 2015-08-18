@@ -1,0 +1,19 @@
+<htmal>
+    <head>
+        <title>Welcome to Django Pizza!</title>
+    </head>
+
+    <body>
+        <hl>Django Pizza Place (BYO)</hl>
+        <ul>
+        {% for pizza in pizzas %}
+            <li>          
+                <h2>{{ pizza.name }} ({{ pizza.price }})</h2>
+                <div>{{ pizza.ingredients }}</div>
+            </li>
+        {% empty %}
+            <h2>ohhh boy... no pizzas for you :'(</h2>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
