@@ -7,9 +7,13 @@
         <hl>Django Pizza Place (BYO)</hl>
         <ul>
         {% for pizza in pizzas %}
-            <li>          
+            <li>
+                {% if pizza.picture %}
+                    <img src="{{ pizza.picture.url }}" width="100px" alt="{{ pizza.name }} picture"/>
+                {% endif %}
                 <h2>{{ pizza.name }} ({{ pizza.price }})</h2>
                 <div>{{ pizza.ingredients }}</div>
+                <hr>
             </li>
         {% empty %}
             <h2>ohhh boy... no pizzas for you :'(</h2>
